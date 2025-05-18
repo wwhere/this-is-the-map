@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhf8xr1a3viot"]
+
+[ext_resource type="TileSet" uid="uid://7o8woblicyqw" path="res://tilesets/tiny_town.tres" id="1_38bb2"]
+[ext_resource type="Script" uid="uid://ckp3yw25cylui" path="res://scenes/blink.gd" id="1_eji7t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eji7t"]
+radius = 5.02494
+
+[node name="Blink" type="CharacterBody2D"]
+texture_filter = 1
+collision_layer = 2
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_eji7t")
+
+[node name="Body" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="Pants" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 3, 0, 2, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="Shoes" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 4, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="Top" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 9, 0, 5, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="Beard" type="TileMapLayer" parent="."]
+visible = false
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 21, 0, 3, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="Hair" type="TileMapLayer" parent="."]
+visible = false
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 19, 0, 1, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="Hat" type="TileMapLayer" parent="."]
+visible = false
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 31, 0, 8, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="Left Hand" type="TileMapLayer" parent="."]
+visible = false
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 33, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="Right Hand" type="TileMapLayer" parent="."]
+visible = false
+texture_filter = 1
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 47, 0, 1, 0, 0, 0)
+tile_set = ExtResource("1_38bb2")
+collision_enabled = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 11)
+shape = SubResource("CircleShape2D_eji7t")
